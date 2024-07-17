@@ -9,7 +9,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
     <title>employee-crud</title>
 </head>
 
@@ -33,25 +32,32 @@
     </nav>
     <div class="navman text-center bg-dark pb-2 text-light">
         <h3>Dashboard</h3>
-        <p>employee / dashboard</p>
+        <p>pegawai / dashboard</p>
     </div>
 
 
     {{-- Table start --}}
-    <div class="container mt-1">
-        <h1 class="text-center">DATA PEGAWAI</h1>
-        <hr>
-        <button type="button" class="mr-1 btn btn-success mb-1" data-toggle="modal"
-            data-target="#addemployee">Tambah</button>
+    <div class="container mt-4">
+        <div class="headertable bg-dark">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5 class="mt-3 ml-4 text-light">Kelola Pegawai</h4>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" class="mr-1 btn btn-success mt-2 mr-4 mb-2 float-right" data-toggle="modal"
+                        data-target="#addemployee">Tambah Pegawai Baru</button>
+                </div>
+            </div>
+        </div>
         <table class="table text-center">
-            <thead class="thead-dark">
+            <thead>
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Foto</th>
                     <th scope="col">Nama</th>
                     <th scope="col">NIP</th>
                     <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Alat</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
