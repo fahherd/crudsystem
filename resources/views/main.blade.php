@@ -14,7 +14,30 @@
 </head>
 
 <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <i class="bi bi-person"></i>
+            </form>
+            <div class="dropdown">
+                <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                    id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35"
+                        alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="navman text-center bg-dark pb-2 text-light">
+        <h3>Dashboard</h3>
+        <p>employee / dashboard</p>
+    </div>
 
+
+    {{-- Table start --}}
     <div class="container mt-1">
         <h1 class="text-center">DATA PEGAWAI</h1>
         <hr>
@@ -98,7 +121,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Kirim</button>
+                    <button type="submit" class="btn btn-success">Kirim</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                 </div>
             </div>
