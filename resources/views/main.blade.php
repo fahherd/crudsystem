@@ -81,6 +81,16 @@
         </table>
     </div>
 
+    {{-- Footer Start --}}
+    <footer class="text-center text-sm-start bg-dark text-light">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            ©2024 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/fahherd">Fajar Herdiansyah</a>
+        </div>
+    </footer>
+
+    {{-- Modal Start --}}
     <div id="addemployee" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
