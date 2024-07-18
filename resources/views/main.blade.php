@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>employee-crud</title>
@@ -17,9 +20,10 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                <i class="bi bi-person"></i>
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                <button id="search-button" type="submit" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
             </form>
             <div class="dropdown">
                 <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
@@ -45,7 +49,8 @@
                 </div>
                 <div class="col-sm-6">
                     <button type="button" class="mr-1 btn btn-success mt-2 mr-4 mb-2 float-right" data-toggle="modal"
-                        data-target="#addemployee">Tambah Pegawai Baru</button>
+                        data-target="#addemployee"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Pegawai
+                        Baru</button>
                 </div>
             </div>
         </div>
@@ -71,9 +76,10 @@
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->nip }}</td>
                         <td>{{ $item->gender }}</td>
-                        <td><a type="button" class="mr-1 btn btn-primary"
-                                href="{{ url('edit/' . $item->id) }}">Edit</a>
-                            <a type="button" class="btn btn-danger" href="{{ url('delete/' . $item->id) }}">Hapus</a>
+                        <td><a type="button" class="mr-1 btn btn-primary" href="{{ url('edit/' . $item->id) }}"><i
+                                    class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a type="button" class="btn btn-danger" href="{{ url('delete/' . $item->id) }}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 @endforeach
