@@ -49,7 +49,8 @@
                 </div>
                 <div class="col-sm-6">
                     <button type="button" class="mr-1 btn btn-success mt-2 mr-4 mb-2 float-right" data-toggle="modal"
-                        data-target="#addemployee"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Pegawai
+                        data-target="#addemployee"><i class="fa fa-sm fa-plus-square" aria-hidden="true"></i> Tambah
+                        Pegawai
                         Baru</button>
                 </div>
             </div>
@@ -77,9 +78,9 @@
                         <td>{{ $item->nip }}</td>
                         <td>{{ $item->gender }}</td>
                         <td><a type="button" class="mr-1 btn btn-primary" href="{{ url('edit/' . $item->id) }}"><i
-                                    class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    class="fa fa-sm fa-pencil" aria-hidden="true"></i></a>
                             <a type="button" class="btn btn-danger" href="{{ url('delete/' . $item->id) }}"><i
-                                    class="fa fa-trash" aria-hidden="true"></i></a>
+                                    class="fa fa-sm fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -100,10 +101,10 @@
     <div id="addemployee" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tambah Data Pegawais</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light">Tambah Data Pegawais</h5>
+                    <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -114,28 +115,30 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <label for="fname">Nama</label>
-                                        <input class="form-control" type="text" id="fname" name="name"
-                                            placeholder="Nama pegawai.." autocomplete="off" autofocus="on" required>
+                                        <input class="form-control border border-dark" type="text" id="fname"
+                                            name="name" placeholder="Nama pegawai.." autocomplete="off"
+                                            autofocus="on" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="lname">NIP</label>
-                                        <input class="form-control" type="number" id="lname" name="nip"
-                                            placeholder="NIP pegawai.." autocomplete="off" minlength="8" required>
+                                        <input class="form-control border border-dark" type="number" id="lname"
+                                            name="nip" placeholder="NIP pegawai.." autocomplete="off"
+                                            minlength="8" required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <label for="">Jenis kelamin</label>
-                                        <select class="form-control" name="gender" required>
+                                        <label class="mt-2 pt-1">Jenis kelamin</label>
+                                        <select class="form-control border border-dark" name="gender" required>
                                             <option value="" selected disabled>Pilih kelamin</option>
                                             <option value="pria">Pria</option>
                                             <option value="wanita">Wanita</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-12">
-                                        <label for="lname">Foto</label>
-                                        <input class="form-control" type="file" id="lname" name="image"
-                                            accept="image/*" required>
+                                        <label class="mt-2 pt-1" for="lname">Foto</label>
+                                        <input class="form-control border border-dark" type="file" id="lname"
+                                            name="image" accept="image/*" required>
                                         <small id="emailHelp" class="form-text text-danger">Max 2MB.</small>
                                     </div>
                                 </div>
