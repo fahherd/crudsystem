@@ -14,41 +14,54 @@
 </head>
 
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center">Edit Data Pegawai</h1>
-        <form action="{{ url('/updatedata') }}" method="post" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="id" value="{{ $data->id }}">
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="fname">Nama</label>
-                    <input class="form-control" type="text" id="fname" name="name" value="{{ $data->name }}"
-                        placeholder="Nama pegawai.." autocomplete="off" autofocus="on" required>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+            </div>
+            <div class="card mx-auto">
+                <div class="card-head bg-dark pt-3 pb-2">
+                    <h5 class="card-title text-center text-light">Edit Data Pegawai</h5>
                 </div>
-                <div class="col-sm-12">
-                    <label for="lname">NIP</label>
-                    <input class="form-control" type="number" id="lname" name="nip" value="{{ $data->nip }}"
-                        placeholder="NIP pegawai.." autocomplete="off" required>
+                <div class="card-body">
+                    <form action="{{ url('/updatedata') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $data->id }}">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="fname">Nama</label>
+                                <input class="form-control" type="text" id="fname" name="name"
+                                    value="{{ $data->name }}" placeholder="Nama pegawai.." autocomplete="off"
+                                    autofocus="on" required>
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="pt-1" for="lname">NIP</label>
+                                <input class="form-control" type="number" id="lname" name="nip"
+                                    value="{{ $data->nip }}" placeholder="NIP pegawai.." autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="pt-1">Jenis kelamin</label>
+                                <select class="form-control" name="gender" required>
+                                    <option value="{{ $data->gender }}" selected>{{ $data->gender }}</option>
+                                    <option value="" disabled>Pilih kelamin</option>
+                                    <option value="pria">Pria</option>
+                                    <option value="wanita">Wanita</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="pt-1" for="lname">Foto</label>
+                                <input class="form-control" type="file" id="lname" name="image"
+                                    accept="image/*">
+                                <small id="emailHelp" class="form-text text-danger">Max 2MB.</small>
+                                <input type="submit" class="btn btn-success mt-1" value="Submit">
+                                <a href="{{ '/' }}" type="button"
+                                    class="btn btn-secondary mt-1 ml-1">Batal</a>
+                            </div>
+                        </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="">Jenis kelamin</label>
-                    <select class="form-control" name="gender" required>
-                        <option value="{{ $data->gender }}" selected>{{ $data->gender }}</option>
-                        <option value="" disabled>Pilih kelamin</option>
-                        <option value="pria">Pria</option>
-                        <option value="wanita">Wanita</option>
-                    </select>
-                </div>
-                <div class="col-sm-12">
-                    <label for="lname">Foto</label>
-                    <input class="form-control" type="file" id="lname" name="image" accept="image/*">
-                    <small id="emailHelp" class="form-text text-danger">Max 2MB.</small>
-                    <input type="submit" class="btn btn-success mt-1" value="Submit">
-                </div>
-            </div>
-
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
