@@ -19,45 +19,27 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Preview
+<img src="public/images/preview.png" alt="Build Status">
 
-## Learning Laravel
+An employee CRUD system is a fundamental part of many applications. It allows you to manage employee data efficiently. CRUD operations refer to the basic actions you can perform on data: Create (add), Read (retrieve), Update (modify), and Delete (remove).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## How to install this project
+<b>Step</b>
+1. Clone Source Code from repo Github <a href="github.com/fahherd/crudsystem">fahherd/crudsystem</a>.
+2. In CMD, cd to directory crudsytem.
+3. Enter command <b>composer install</b>. need internet connection.
+4. Run <b>php artisan</b> command, to test is artisan Laravel running.
+5. Make your own empty database on mysql.
+6. Copy file .env.example, raname .env.
+7. Back to terminal and run <b>php artisan key:generate</b>.
+8. Setting database connection in .env file (DB_DATABASE, DB_USERNAME, DB_PASSWORD).<br>
+DB_CONNECTION=mysql<br>
+DB_HOST=localhost<br>
+DB_PORT=3306<br>
+#DB_DATABASE=(Your db name)<br>
+DB_DATABASE=example<br>
+DB_USERNAME=root<br>
+DB_PASSWORD=
+9. Run <b>php artisan migrate</b> in CMD, To make a table.<br>
+After all, run command <b>php artisan serve</b> then access localy from your browser with <b>http://localhost:8000/</b>
