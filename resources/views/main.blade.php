@@ -83,6 +83,32 @@
                                     class="fa fa-sm fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
+
+                    {{-- Modal delete confirmation --}}
+                    <div id="deleteconfir" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 text-center">
+                                            <div class="alert bg-danger text-center mt-3 mb-3 pt-3 pb-3">
+                                                <i class="text-light fa-2xl fa-solid fa-triangle-exclamation"></i>
+                                            </div>
+                                            <h5 class="font-weight-bold mt-4">Apakah kamu yakin?</h5>
+                                            <p>Tindakan ini akan menghapus data secara permanen, <br> periksa lagi untuk
+                                                mencegah
+                                                kesalahan.
+                                            </p>
+                                            <a type="button" class="w-50 mt-3 btn btn-danger"
+                                                href="{{ url('delete/' . $item->id) }}">Hapus
+                                                Permanent</a>
+                                            <button type="button" class="w-50 mt-2 mb-4 btn btn-secondary"
+                                                data-dismiss="modal">Batal</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 @endforeach
             </tbody>
         </table>
@@ -153,43 +179,18 @@
         </div>
     </div>
 
-    {{-- Modal delete confirmation --}}
-    <div id="deleteconfir" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <div class="alert bg-danger text-center mt-3 mb-3 pt-3 pb-3">
-                                <i class="text-light fa-2xl fa-solid fa-triangle-exclamation"></i>
-                            </div>
-                            <h5 class="font-weight-bold mt-4">Apakah kamu yakin?</h5>
-                            <p>Tindakan ini akan menghapus data secara permanen, <br> periksa lagi untuk mencegah
-                                kesalahan.
-                            </p>
-                            <a type="button" class="w-50 mt-3 btn btn-danger"
-                                href="{{ url('delete/' . $item->id) }}">Hapus
-                                Permanent</a>
-                            <button type="button" class="w-50 mt-2 mb-4 btn btn-secondary"
-                                data-dismiss="modal">Batal</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-        </script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
